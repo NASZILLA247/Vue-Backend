@@ -24,7 +24,7 @@ MongoClient.connect('mongodb+srv://nasiru:Loggedin123@cluster0.sb89n.mongodb.net
 
 // dispaly a message for root path to show that API is working
 app.get('/', (req, res, next) => {
-    res.send('Select a collection, e.g., /collection/messages')
+    res.send('Select a collection')
 })
 
 // get the collection name
@@ -92,7 +92,7 @@ app.post("/collection/:collectionName", (req, res, next) => {
     })
 })
 
-const portNum = process.env.POST || 3000
-app.listen(portNum, () => {
+const port = process.env.POST || 3000
+app.listen(port, () => {
     console.log('Express.js server running at localhost:3000')
 })
