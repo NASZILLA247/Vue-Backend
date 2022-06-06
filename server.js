@@ -92,7 +92,7 @@ app.post("/collection/:collectionName", (req, res, next) => {
     })
 })
 
-const port = process.env.POST || 3000
-app.listen(process.env.POST || 3000, () => {
+const portNum = process.env.POST || 3000
+app.listen(portNum, () => {
     console.log('Express.js server running at localhost:3000')
 })
